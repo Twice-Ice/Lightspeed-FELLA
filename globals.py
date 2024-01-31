@@ -1,0 +1,5 @@
+import pygame
+SCREEN_X = 800
+SCREEN_Y = 800
+CENTER = (SCREEN_X/2, SCREEN_Y/2)
+MAX_SIZE = 12
