@@ -18,7 +18,8 @@ ticker = 0
 while not doExit:
     ticker += 1
     screen.fill((0,0,0))
-    if ticker < 500:
+    if ticker < 400 and ticker % 2 == 0:
+        particles.append(LightParticle())
         particles.append(LightParticle())
     
     for particle in particles:

@@ -15,7 +15,7 @@ class LightParticle:
         if self.size < 1:
             self.size = 1
 
-        self.color = self.color.move_towards(self.endColor, self.weight)
+        self.color = self.color.move_towards(self.endColor, self.weight/1.75)#1-CENTER[0]/len(str(CENTER[0])))
         self.weight *= (random.randrange(1001,1025)/1000)
         self.xpos, self.ypos = pygame.Vector2(self.xpos, self.ypos).move_towards(self.goTo, self.weight)
         if not (self.xpos > 0 and self.xpos < SCREEN_X and self.ypos > 0 and self.ypos < SCREEN_Y):
@@ -23,7 +23,7 @@ class LightParticle:
 
     def reset(self):
         #TYPES OF COLORS POSSIBLE: vignette, normal, combo, RB, pastel, fullrand
-        self.color, self.endColor = self.setColors("pastel")
+        self.color, self.endColor = self.setColors("RB")
         self.size = 2
         self.weight = 0.1
         self.xpos, self.ypos = CENTER
